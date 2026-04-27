@@ -1,0 +1,220 @@
+.page {
+  min-height: calc(100vh - 62px);
+  background: var(--bg-page);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 40px 80px;
+}
+
+.about {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Left card */
+.left {
+  flex: 1;
+  background-color: rgb(130, 130, 130);
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeInUp 0.8s ease 0.1s both;
+  will-change: transform, opacity;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.left:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 8px 12px rgba(200,200,200,0.4));
+}
+
+.left h1 {
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 900;
+}
+.left p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  font-family: system-ui, sans-serif;
+  opacity: 0.9;
+}
+
+/* Right card */
+.right {
+  flex: 1;
+  background-color: rgb(225, 222, 222);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease 0.2s both;
+  will-change: transform, opacity;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.right:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 10px 8px rgba(80,80,80,0.35));
+}
+
+.right h2 {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #333;
+  line-height: 1.5;
+}
+.featureList li i {
+  font-size: 1rem;
+  color: #000;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--card-glass);
+  backdrop-filter: var(--card-blur);
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 16px;
+  padding: 24px 36px;
+  min-width: 140px;
+  transition: transform 0.3s;
+}
+.stat:hover { transform: translateY(-4px); }
+.statVal { font-size: 1.8rem; font-weight: 900; }
+.statLabel { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ── Explore CTA banner ── */
+.exploreCta {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(to right, #e0dddd, #6c6c6c);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ctaContent {
+  padding: 64px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.ctaHeading {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 900;
+  color: #111;
+  line-height: 1.2;
+}
+
+.ctaSub {
+  font-size: 0.9rem;
+  color: #333;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+/* Wipe button — mirrors Home's .box animation */
+.exploreBox {
+  position: relative;
+  width: 220px;
+  height: 64px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1.5px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-decoration: none;
+}
+.exploreBox:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.exploreLayer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  transition: transform 0.45s ease;
+}
+.exploreWhiteLayer { background: #f0eeee; z-index: 0; }
+.exploreBlackLayer { background: #111; z-index: 1; }
+.exploreBox:hover .exploreBlackLayer { transform: translateX(-110%); }
+
+.exploreText {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  transition: color 0.45s ease;
+}
+.exploreBox:hover .exploreText { color: #111; }
+
+/* Pre-animation hidden state + wrappers */
+.preAnim    { opacity: 0; }
+.reviewsWrap { width: 100%; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .page { padding: 40px 20px; }
+  .container { flex-direction: column; }
+  .left, .right { width: 100%; }
+  .ctaContent { padding: 48px 24px; }
+}
+
+@media (max-width: 480px) {
+  .left h1 { font-size: 22px; }
+  .right h2 { font-size: 18px; }
+  .stat { padding: 16px 24px; min-width: 110px; }
+  .statVal { font-size: 1.4rem; }
+  .ctaHeading { font-size: 1.2rem; }
+  .exploreBox { width: 190px; height: 56px; }
+}

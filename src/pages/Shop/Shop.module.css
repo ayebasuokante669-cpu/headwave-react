@@ -1,0 +1,180 @@
+.page {
+  min-height: calc(100vh - 62px);
+  background: var(--bg-page);
+  padding-bottom: 60px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 24px 40px 0;
+}
+
+.filterBtn {
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(128,128,128,0.4);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  transition: all 0.2s;
+}
+.filterBtn:hover { border-color: var(--border); background: rgba(128,128,128,0.12); }
+.filterActive {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+}
+
+.searchTag {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 8px;
+  font-style: italic;
+}
+
+.noResults {
+  text-align: center;
+  margin-top: 80px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 32px 40px;
+}
+
+/* Flip card */
+.cardWrap {
+  perspective: 1200px;
+  width: 280px;
+  height: 390px;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+  border-radius: 24px;
+}
+.cardWrap:hover .flipper { transform: rotateY(180deg); }
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  background: var(--card-glass);
+  backdrop-filter: var(--card-blur);
+  border: 1.5px solid rgba(128,128,128,0.35);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s;
+}
+.front:hover, .back:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+
+.back { transform: rotateY(180deg); }
+
+.cardImg {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.cardName {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.cardCategory {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.cardPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Swatches */
+.swatches {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid transparent;
+  outline: 2px solid rgba(128,128,128,0.3);
+  transition: transform 0.2s, outline-color 0.2s;
+}
+.dot:hover { transform: scale(1.2); }
+.dotActive { outline-color: var(--border); transform: scale(1.15); }
+
+/* Card actions */
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.addCartBtn,
+.viewBtn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border: 1.5px solid var(--border);
+  transition: all 0.25s;
+}
+.addCartBtn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.addCartBtn:hover { opacity: 0.8; }
+.viewBtn { background: transparent; color: var(--text); }
+.viewBtn:hover { background: rgba(128,128,128,0.15); }
+
+/* Pre-animation hidden state (before IntersectionObserver fires) */
+.preAnim { opacity: 0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner { padding: 0 20px; height: auto; min-height: 140px; }
+  .banner img { width: 120px; height: 120px; }
+  .filters { padding: 16px 20px 0; }
+  .grid { padding: 24px 16px; gap: 16px; }
+  .cardWrap { width: 240px; height: 350px; }
+  .cardImg { width: 160px; height: 160px; }
+}
+
+@media (max-width: 480px) {
+  .banner { flex-direction: column; text-align: center; padding: 20px; height: auto; }
+  .cardWrap { width: 260px; height: 370px; }
+}

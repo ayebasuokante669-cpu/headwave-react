@@ -1,0 +1,69 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #ffffff;
+  --bg-grad: linear-gradient(to right, #e0dddd, #6c6c6c);
+  --bg-page: linear-gradient(to right, #ffffff, #5b5a5a);
+  --text: #000000;
+  --text-muted: #555555;
+  --border: #000000;
+  --card-glass: linear-gradient(120deg, rgba(0,0,0,0.15), rgba(255,255,255,0.25));
+  --card-blur: blur(10px);
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg: #111111;
+  --bg-grad: linear-gradient(to right, #1a1a1a, #3a3a3a);
+  --bg-page: linear-gradient(to right, #111111, #333333);
+  --text: #f0f0f0;
+  --text-muted: #aaaaaa;
+  --border: #ffffff;
+  --card-glass: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12));
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.9s ease, color 0.9s ease;
+}
+
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 0.9s;
+  transition-timing-function: ease;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: 'Orbitron', sans-serif; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* ── Page loader (Suspense fallback) ── */
+.pageLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 62px);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Shared entrance animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fadeInUp {
+  animation: fadeInUp 0.6s ease both;
+}
