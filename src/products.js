@@ -20,11 +20,11 @@ export const products = [
     ],
     colors: ["white", "black", "blue", "green", "pink"],
     images: {
-      white: "/Media1/applewhite.png",
-      black: "/Media1/appleblack.png",
-      blue:  "/Media1/appleblue.png",
-      green: "/Media1/applegreen.png",
-      pink:  "/Media1/applepink.png",
+      white: "/Media1/images/applewhite.png",
+      black: "/Media1/images/appleblack.png",
+      blue:  "/Media1/images/appleblue.png",
+      green: "/Media1/images/applegreen.png",
+      pink:  "/Media1/images/applepink.png",
     },
   },
   {
@@ -48,8 +48,8 @@ export const products = [
     ],
     colors: ["black", "white"],
     images: {
-      black: "/Media1/JBL_CHARGE_6_BLACK_FRONT.webp",
-      white: "/Media1/JBL_CHARGE_6_WHITE_FRONT.webp",
+      black: "/Media1/images/JBL_CHARGE_6_BLACK_FRONT.webp",
+      white: "/Media1/images/JBL_CHARGE_6_WHITE_FRONT.webp",
     },
   },
   {
@@ -73,9 +73,9 @@ export const products = [
     ],
     colors: ["white", "black", "yellow"],
     images: {
-      white:  "/Media1/Ear-a-white.webp",
-      black:  "/Media1/Ear-a-black.webp",
-      yellow: "/Media1/Ear-a-yellow.webp",
+      white:  "/Media1/images/Ear-a-white.webp",
+      black:  "/Media1/images/Ear-a-black.webp",
+      yellow: "/Media1/images/Ear-a-yellow.webp",
     },
   },
   {
@@ -99,8 +99,8 @@ export const products = [
     ],
     colors: ["black", "white"],
     images: {
-      black: "/Media1/BOSE Smart Ultra 5.1.2 Soundbar black.png",
-      white: "/Media1/BOSE Smart Ultra 5.1.2 Soundbar white.png",
+      black: "/Media1/images/BOSE Smart Ultra 5.1.2 Soundbar black.png",
+      white: "/Media1/images/BOSE Smart Ultra 5.1.2 Soundbar white.png",
     },
   },
   {
@@ -124,9 +124,9 @@ export const products = [
     ],
     colors: ["white", "black", "quartz"],
     images: {
-      white:  "/Media1/RZ White.png",
-      black:  "/Media1/RZ black.png",
-      quartz: "/Media1/RZ quartz.png",
+      white:  "/Media1/images/RZ White.png",
+      black:  "/Media1/images/RZ black.png",
+      quartz: "/Media1/images/RZ quartz.png",
     },
   },
   {
@@ -150,14 +150,14 @@ export const products = [
     ],
     colors: ["black", "blueDusk", "citrusYellow", "fogGrey", "petalPink", "sunsetPeach", "twilightBlue", "sandstone"],
     images: {
-      black:        "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) Black.png",
-      blueDusk:     "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) BlueDusk.png",
-      citrusYellow: "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) CitrusYellow.png",
-      fogGrey:      "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) FogGrey.png",
-      petalPink:    "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) PetalPink.png",
-      sunsetPeach:  "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) SunsetPeach.png",
-      twilightBlue: "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen) TwilightBlue.png",
-      sandstone:    "/Media1/BoseSoundLinkFlexPortableSpeaker(2nd Gen)Sandstone.png",
+      black:        "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) Black.png",
+      blueDusk:     "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) BlueDusk.png",
+      citrusYellow: "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) CitrusYellow.png",
+      fogGrey:      "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) FogGrey.png",
+      petalPink:    "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) PetalPink.png",
+      sunsetPeach:  "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) SunsetPeach.png",
+      twilightBlue: "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen) TwilightBlue.png",
+      sandstone:    "/Media1/images/BoseSoundLinkFlexPortableSpeaker(2nd Gen)Sandstone.png",
     },
   },
   {
@@ -181,7 +181,7 @@ export const products = [
     ],
     colors: ["black"],
     images: {
-      black: "/Media1/BoseSmartUltraSoundbar Black.png",
+      black: "/Media1/images/BoseSmartUltraSoundbar Black.png",
     },
   },
   {
@@ -205,7 +205,7 @@ export const products = [
     ],
     colors: ["black"],
     images: {
-      black: "/Media1/Samsung Q930F Q-Series Wireless Dolby Atmos 9.1.4ch Soundbar black.png",
+      black: "/Media1/images/Samsung Q930F Q-Series Wireless Dolby Atmos 9.1.4ch Soundbar black.png",
     },
   },
   {
@@ -229,8 +229,8 @@ export const products = [
     ],
     colors: ["black", "white"],
     images: {
-      black: "/Media1/GalaxyBuds4 Black.png",
-      white: "/Media1/GalaxyBuds4 white.png",
+      black: "/Media1/images/GalaxyBuds4 Black.png",
+      white: "/Media1/images/GalaxyBuds4 white.png",
     },
   },
   {
@@ -254,10 +254,10 @@ export const products = [
     ],
     colors: ["black", "midnightBlue", "platinumSilver", "sandPink"],
     images: {
-      black:          "/Media1/SonyWH-1000XM6_Black.png",
-      midnightBlue:   "/Media1/SonyWH-1000XM6_MidnightBlue.png",
-      platinumSilver: "/Media1/SonyWH-1000XM6_PlatinumSilver.png",
-      sandPink:       "/Media1/SonyWH-1000XM6_SandPink.png",
+      black:          "/Media1/images/SonyWH-1000XM6_Black.png",
+      midnightBlue:   "/Media1/images/SonyWH-1000XM6_MidnightBlue.png",
+      platinumSilver: "/Media1/images/SonyWH-1000XM6_PlatinumSilver.png",
+      sandPink:       "/Media1/images/SonyWH-1000XM6_SandPink.png",
     },
   },
   {
@@ -281,7 +281,7 @@ export const products = [
     ],
     colors: ["black"],
     images: {
-      black: "/Media1/ShureSM7B_Black.png",
+      black: "/Media1/images/ShureSM7B_Black.png",
     },
   },
 ]

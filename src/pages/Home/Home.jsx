@@ -19,7 +19,7 @@ export default function Home() {
 
         <div className={styles.heroRight} />
 
-        <img src="/images/homeimage.png" className={styles.img} alt="Premium headphones" />
+        <img src="/Media1/images/homeimage.png" className={styles.img} alt="Premium headphones" />
       </div>
     </section>
   )
